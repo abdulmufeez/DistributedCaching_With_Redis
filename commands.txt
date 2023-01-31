@@ -1,0 +1,42 @@
+Docker Commands:
+
+1 - docker run --name [NameOfTheContainer] --port | -p [externalPort]:[internalDefaultImagePort] -d | --image [imageName]:latest (for example: redis)
+## this will download redis latest version image with name of the container and bind redis default port 6379 to external port
+
+2 - docker images
+## this will show the all recent container stats
+
+3 - docker ps -a    (-a = all)
+## this will show all images in docker
+
+4 - docker exec -it [NameOfTheContainer] sh     (-it = interactively)
+## this will open up a ssh shell of that image
+
+5 - docker stop [first 3 char of containerId] (for example docker stop 6f0)
+## this will stop container 
+
+6 - docker rm [first 3 char of containerId] (for example docker rm 6f0) (rm = remove)
+## this will remove that container
+
+7 - docker rmi [first 3 char of imageId]
+## this will remove the download image
+
+Redis Commands:
+
+1 - ping
+## to check is running
+
+2 - select [dataBaseKey] (for example select 0)
+## this will select database of that number
+
+3 - dbsize
+## to check cache size
+
+4 - scan [dataBaseKey] (for example select 0)
+## this will scan for data in database
+
+5 - hgetall [key] (for example hgetall mufeez)
+#3 this will get all properties stored in that key with actual cache data
+
+6 - hget [key] (for example hget mufeez)
+#3 this will get actual cache data in string
